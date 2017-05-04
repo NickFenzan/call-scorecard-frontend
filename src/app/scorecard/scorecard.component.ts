@@ -45,6 +45,12 @@ export class ScorecardComponent implements OnInit {
   ngOnInit() {
   }
 
+  notApplicable(event){
+    // event.target
+    // console.log(criteria);
+    // this.model.criteriaScore[criteria] = false;
+  }
+
   get diagnostic() { return JSON.stringify(this.model); }
 
 }
