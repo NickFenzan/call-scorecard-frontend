@@ -1,0 +1,121 @@
+<div class="container">
+  {{diagnostic}}
+  <h1>Call Scorecard</h1>
+  <div class="form-group">
+    <label for="reviewer">Reviewer</label>
+    <select class="form-control" id="reviewer" [(ngModel)]="model.reviewer">
+      <option *ngFor="let reviewer of reviewers" [value]="reviewer">
+        {{reviewer}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="reviewee">Reviewee</label>
+    <select class="form-control" id="reviewee" [(ngModel)]="model.reviewee">
+      <option *ngFor="let reviewee of reviewees" [value]="reviewee">
+        {{reviewee}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="call-file">Call File</label>
+    <input type="file">
+  </div>
+  <h2>Welcome Statement</h2>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.greeting">
+      Hello, welcome to Miller Vein, this is Jim. Whom do I have the pleasure of
+      speaking with today. Great, Mary. Thank you for calling. How may I help
+      you?
+    </label>
+  </div>
+  <h2>Engaging the Guest</h2>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.guestName">
+      Consistent use of guest's name throughout call
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.keepInformed">
+      Kept guest informed of of actions
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.politeLanguage">
+      Use of "please, may I and thank you"
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.enthusiasm">
+      Overall general enthusiasm
+    </label>
+  </div>
+  <h2>Seek Permission/Approval</h2>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.permissionInformation">
+      I'll be happy to schedule your consultation. In order to do so, I'll need
+      to collect some information from you. Will that be okay?
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.offerAdditionalHelp">
+      Did I address your needs today? Is there anything else I can help you with
+      today?
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.permissionHold">
+      Use of - This may take a minute, may I please put you on hold while I get
+      you an answer?
+    </label>
+  </div>
+  <h2>Patient Source</h2>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.referredByPhysician">
+      May I ask if you were referred by a physician and if so what his or her
+      name is?
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.referralSource">
+      How did you hear about us?
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.referralSourceDataEntry">
+      Was source recorded in patient's record?
+    </label>
+  </div>
+  <h2>Overcoming Obstacles</h2>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.overcomeObjection">
+      If guest presented an objection, was it effectively overcome?
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.rescheduleCancellation">
+      If guest cancelled, did Teammate, try to reschedule.
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="model.criteriaScore.freeVsFull">
+      If guest inquired about Free Evaluation, did Teammate effectively explain
+      the difference between cosmetic (spider veins) and medically complicated
+      varicose veins.
+    </label>
+  </div>
+</div>
