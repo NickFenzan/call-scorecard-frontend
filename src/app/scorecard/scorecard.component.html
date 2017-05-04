@@ -1,5 +1,5 @@
 <div class="container">
-  {{diagnostic}}
+  <!-- {{diagnostic}} -->
   <h1>Call Scorecard</h1>
   <div class="form-group">
     <label for="reviewer">Reviewer</label>
@@ -81,6 +81,7 @@
   <div class="form-group">
     <label>
       <input type="checkbox" [(ngModel)]="model.criteriaScore.referredByPhysician">
+      <button (click)="notApplicable($event)">N/A</button>
       May I ask if you were referred by a physician and if so what his or her
       name is?
     </label>
