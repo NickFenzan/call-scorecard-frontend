@@ -1,6 +1,19 @@
 <div class="container">
   <!-- {{diagnostic}} -->
-  <h1>Call Scorecard</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Call Scorecard</h1>
+    </div>
+    <div class="col-md-8">
+    <div class="alert alert-success" [@notification]="success">
+      Scorecard sent successfully.
+    </div>
+    <div class="alert alert-danger" [@notification]="error">
+      There was an error submitting the scorecard. Please check over the form and
+      try again.
+    </div>
+    </div>
+  </div>
   <div class="form-group">
     <label for="reviewer">Reviewer</label>
     <select class="form-control" id="reviewer" [(ngModel)]="scorecard.reviewer">
@@ -19,7 +32,7 @@
   </div>
   <div class="form-group">
     <label for="call-file">Call File</label>
-    <input type="file">
+    <input type="file" (change)="callFileChange($event)" #fileInput>
   </div>
   <div *ngFor="let section of scorecard.sections" class="panel panel-default">
     <div class="panel-heading">{{section.name}}</div>
@@ -49,4 +62,9 @@
       </div>
     </div>
   </div>
+  <button class="btn btn-default btn-primary btn-lg center-block"
+  style="margin-bottom:20px;"
+  (click)="submit()">
+    Submit
+  </button>
 </div>

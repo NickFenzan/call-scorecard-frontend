@@ -10,7 +10,8 @@ export class ScorecardBuilderService {
   constructor(private http: Http) { }
 
   getScorecard(): Observable<Scorecard> {
-    return this.http.get("./assets/scorecard.json").map(r => r.json());
+    return this.http.get("./assets/scorecard.json").map(r => new Scorecard(r.json()));
   }
+
 
 }
