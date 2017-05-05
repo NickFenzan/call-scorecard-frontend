@@ -1,0 +1,95 @@
+{
+  "sections": [
+    {
+      "name": "Welcome Statement",
+      "criteria": [
+        {
+          "id": "greeting",
+          "description": "Hello, welcome to Miller Vein, this is Jim. Whom do I have the pleasure of speaking with today. Great, Mary. Thank you for calling. How may I help you?"
+        }
+      ]
+    },
+    {
+      "name": "Engaging the Guest",
+      "criteria": [
+        {
+          "id": "guestName",
+          "description": "Consistent use of guest's name throughout call"
+        },
+        {
+          "id": "keepInformed",
+          "description": "Kept guest informed of of actions"
+        },
+        {
+          "id": "politeLanguage",
+          "description": "Use of \"please, may I and thank you\""
+        },
+        {
+          "id": "enthusiasm",
+          "description": "Overall general enthusiasm"
+        }
+      ]
+    },
+    {
+      "name": "Seek Permission/Approval",
+      "criteria": [
+        {
+          "id": "permissionInformation",
+          "description": "I'll be happy to schedule your consultation. In order to do so, I'll need to collect some information from you.  Will that be okay?"
+        },
+        {
+          "id": "offerAdditionalHelp",
+          "description": "Did I address your needs today? Is there anything else I can help you with today?"
+        },
+        {
+          "id": "permissionHold",
+          "description": "Use of - This may take a minute, may I please put you on hold while I get you an answer?",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "name": "Patient Source",
+      "criteria": [
+        {
+          "id": "referredByPhysician",
+          "description": "May I ask if you were referred by a physician and if so what his or her name is?"
+        },
+        {
+          "id": "howDidYouHearAboutUs",
+          "description": "How did you hear about us?",
+          "optional": true
+        },
+        {
+          "id": "referralSourceDataEntry",
+          "description": "Was the referral source recorded in the patient record?"
+        }
+      ]
+    },
+    {
+      "name": "Overcoming Obstacles",
+      "criteria": [
+        {
+          "id": "overcomeObjection",
+          "description": "If guest presented an objection, was it effectively overcome?",
+          "optional": true
+        },
+        {
+          "id": "cancellationReschedule",
+          "description": "If guest cancelled, did Teammate try to reschedule?",
+          "optional": true
+        },
+        {
+          "id": "noRescheduleFollowUp",
+          "description": "If guest did not want to reschedule, did teammate attempt to learn why and if we could follow up later?",
+          "optional": true
+        },
+        {
+          "id": "freeVsFull",
+          "description": "If guest inquired about Free Evaluation, did Teammate effectively explain the difference between cosmetic (spider veins) and medically complicated varicose veins.",
+          "optional": true
+        }
+      ]
+    }
+  ]
+}

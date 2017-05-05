@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ScorecardComponent } from './scorecard/scorecard.component';
 
+import { ScorecardBuilderService } from './scorecard/scorecard-builder.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { ScorecardComponent } from './scorecard/scorecard.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ ScorecardBuilderService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

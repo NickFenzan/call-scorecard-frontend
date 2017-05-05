@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Scorecard, Criteria } from './scorecard';
+import { ScorecardBuilderService } from  './scorecard-builder.service';
 
 @Component({
   selector: 'scorecard',
@@ -21,36 +23,27 @@ export class ScorecardComponent implements OnInit {
       "Connie Gordon"
   ];
 
-  private model = {
-    criteriaScore:{
-      "greeting":true,
-      "guestName":true,
-      "keepInformed":true,
-      "politeLanguage":true,
-      "enthusiasm":true,
-      "permissionInformation":true,
-      "offerAdditionalHelp":true,
-      "permissionHold":true,
-      "referredByPhysician":true,
-      "referralSource":true,
-      "referralSourceDataEntry":true,
-      "overcomeObjection":true,
-      "rescheduleCancellation":true,
-      "freeVsFull":true
-    }
-  };
+  private scorecard: Scorecard = new Scorecard();
 
-  constructor() { }
+  constructor(scorecardBuilder: ScorecardBuilderService) {
+    scorecardBuilder.getScorecard().subscribe(s => {
+      this.scorecard = s
+      this.scorecard.sections
+      .forEach(s => s.criteria.forEach(c => c.value = true));
+    });
+  }
 
   ngOnInit() {
   }
 
-  notApplicable(event){
-    // event.target
-    // console.log(criteria);
-    // this.model.criteriaScore[criteria] = false;
+  toggleCriteriaValue(criteria: Criteria){
+    criteria.value = !criteria.value;
   }
 
-  get diagnostic() { return JSON.stringify(this.model); }
+  notApplicable(criteria: Criteria){
+    criteria.notApplicable = !criteria.notApplicable;
+  }
+
+  get diagnostic() { return JSON.stringify(this.scorecard); }
 
 }
