@@ -24,7 +24,7 @@ import { ScorecardBuilderService } from  './scorecard-builder.service';
 })
 export class ScorecardComponent implements OnInit {
   /**Config -----------------------------------------**/
-  readonly scorecardUrl:string = "http://10.1.1.118:8082";
+  readonly scorecardUrl:string = "https://callscorecard/backend";
 
   readonly reviewers = [
       "Carol Leeth",
