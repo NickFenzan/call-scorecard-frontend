@@ -27,6 +27,11 @@ export class ScorecardComponent implements OnInit {
   readonly scorecardUrl:string = "https://callscorecard/backend";
 
   readonly reviewers = [
+      "Meredith Harris",
+      "Rhonda Najor",
+      "Jessica Clark",
+      "Vicki Catto",
+      "Connie Gordon",
       "Carol Leeth",
       "Cindy Lieto",
       "Dianne Nichols"
